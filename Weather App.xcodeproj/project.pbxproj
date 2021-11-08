@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		72DCA4F1272CF4B000362259 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DCA4F0272CF4B000362259 /* AppDelegate.swift */; };
 		72DCA4F3272CF4B000362259 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DCA4F2272CF4B000362259 /* SceneDelegate.swift */; };
-		72DCA4F5272CF4B000362259 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DCA4F4272CF4B000362259 /* ViewController.swift */; };
+		72DCA4F5272CF4B000362259 /* WeatherVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72DCA4F4272CF4B000362259 /* WeatherVC.swift */; };
 		72DCA4F8272CF4B000362259 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72DCA4F6272CF4B000362259 /* Main.storyboard */; };
 		72DCA4FA272CF4B200362259 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 72DCA4F9272CF4B200362259 /* Assets.xcassets */; };
 		72DCA4FD272CF4B200362259 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 72DCA4FB272CF4B200362259 /* LaunchScreen.storyboard */; };
@@ -22,7 +22,7 @@
 		72DCA4ED272CF4B000362259 /* Weather App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Weather App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		72DCA4F0272CF4B000362259 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		72DCA4F2272CF4B000362259 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		72DCA4F4272CF4B000362259 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		72DCA4F4272CF4B000362259 /* WeatherVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeatherVC.swift; sourceTree = "<group>"; };
 		72DCA4F7272CF4B000362259 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		72DCA4F9272CF4B200362259 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		72DCA4FC272CF4B200362259 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -43,6 +43,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7279C53E2738E1A200355E25 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				72DCA504272D0F1200362259 /* WeatherManager.swift */,
+			);
+			path = Managers;
+			sourceTree = "<group>";
+		};
+		7279C53F2738E1C200355E25 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				72DCA4F6272CF4B000362259 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		7279C5402738E1D500355E25 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				72DCA4F4272CF4B000362259 /* WeatherVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		72DCA4E4272CF4B000362259 = {
 			isa = PBXGroup;
 			children = (
@@ -64,12 +88,12 @@
 			children = (
 				72DCA4F0272CF4B000362259 /* AppDelegate.swift */,
 				72DCA4F2272CF4B000362259 /* SceneDelegate.swift */,
-				72DCA4F4272CF4B000362259 /* ViewController.swift */,
-				72DCA4F6272CF4B000362259 /* Main.storyboard */,
+				72DCA508272E497B00362259 /* Model */,
+				7279C53F2738E1C200355E25 /* View */,
+				7279C5402738E1D500355E25 /* Controller */,
 				72DCA4F9272CF4B200362259 /* Assets.xcassets */,
 				72DCA4FB272CF4B200362259 /* LaunchScreen.storyboard */,
 				72DCA4FE272CF4B200362259 /* Info.plist */,
-				72DCA508272E497B00362259 /* Model */,
 			);
 			path = "Weather App";
 			sourceTree = "<group>";
@@ -77,7 +101,7 @@
 		72DCA508272E497B00362259 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				72DCA504272D0F1200362259 /* WeatherManager.swift */,
+				7279C53E2738E1A200355E25 /* Managers */,
 				72DCA506272E41CD00362259 /* WeatherData.swift */,
 				72DCA509272E499200362259 /* WeatherModel.swift */,
 			);
@@ -155,7 +179,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				72DCA4F5272CF4B000362259 /* ViewController.swift in Sources */,
+				72DCA4F5272CF4B000362259 /* WeatherVC.swift in Sources */,
 				72DCA507272E41CD00362259 /* WeatherData.swift in Sources */,
 				72DCA4F1272CF4B000362259 /* AppDelegate.swift in Sources */,
 				72DCA505272D0F1200362259 /* WeatherManager.swift in Sources */,
@@ -312,6 +336,7 @@
 				DEVELOPMENT_TEAM = 5ULRZ5R339;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Weather App/Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to get the weather from where you are.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -340,6 +365,7 @@
 				DEVELOPMENT_TEAM = 5ULRZ5R339;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Weather App/Info.plist";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "We need your location to get the weather from where you are.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;

@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreLocation
 
 protocol WeatherManagerDelegate {
     func didUpdateWeather(_ weatherManager: WeatherManager, weather: WeatherModel)
@@ -17,10 +18,18 @@ struct WeatherManager {
     
     var delegate: WeatherManagerDelegate?
     
+    
     func fetchWeather(cityName: String) {
         let urlString = "\(weatherURL)&q=\(cityName)"
         performRequest(with: urlString)
     }
+    
+    
+    func fetchWeather(latitude: CLLocationDegrees, longitude: CLLocationDegrees) {
+        let urlString = "\(weatherURL)&lat=\(latitude)&lon=\(longitude)"
+        performRequest(with: urlString)
+    }
+    
     
     func performRequest(with urlString: String) {
         
@@ -45,6 +54,7 @@ struct WeatherManager {
             task.resume()
         }
     }
+    
     
     func parseJSON(_ weatherData: Data) -> WeatherModel? {
         let decoder = JSONDecoder()
